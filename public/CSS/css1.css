@@ -1,0 +1,180 @@
+/*element selector, selects all <p> elements*/
+/*
+In this example only <p> elements with class="center" will be red and center-aligned: 
+p.center  {
+  text-align :  center;
+  color :  red;
+}
+*/
+
+
+a:link {
+    color: green;
+}
+
+a:active {
+    color:dodgerblue;
+}
+
+a:hover{
+    color:limegreen;
+}
+
+a:visited {
+    color:darkslategrey;
+}
+
+/* (*) is a universal selector */
+html {
+    background-color:rgb(60, 83, 13);
+    background-image: url('images/green.jpg');
+    background-size: cover;
+    margin:0;
+    padding:0;
+    
+}
+
+:root {
+    --navbar-bg-colr: #1b6535;
+    --navbar-colr: black;
+    --select-bg-colr: black;
+    --select-colr: green;
+    --navbar-hov-colr: #a8c66c;
+    --body-bg-colr: #e1dd72;
+    --body-colr: black;
+}
+
+::selection {
+    background-color: var(--select-bg-colr);
+    color: var(--select-colr);
+}
+
+h2 {
+    position: relative;
+    left: 1cm;
+}
+
+.nav-bar {
+    
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    background-color:var(--navbar-bg-colr);
+    overflow: auto;
+}
+
+
+
+.nav-bar a {
+    color: black;
+    font-weight: bolder;
+    color: var(--navbar-colr);
+    font-size: large;
+    display: inline-block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+
+.nav-bar a:hover{
+    background-color: var(--navbar-hov-colr);
+}
+
+body {
+    width: 80%;
+    margin: auto;
+    position: center;
+    background-color: var(--body-bg-colr);
+    color: var(--body-colr);
+}
+
+.project-names { 
+    border-style: outset;
+    border-radius: 12px;
+    max-width: 200px;
+
+}
+
+.center {
+    display: block;
+    margin:auto;
+    
+}
+
+.big-img {
+    width:80%;
+}
+.back-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+
+details {
+    border-style: outset;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
+
+
+#web-header {
+    text-align: center;
+    animation-name: webhead;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+
+@keyframes webhead {
+    100%{transform: rotateY(360deg)};
+}
+/*
+.project-desc {
+    background-color: goldenrod; 
+    border-left: 2px solid purple;
+    width: max-content;
+}
+*/
+
+
+.project-names:hover {
+    background-color: lightgreen;
+}
+
+p {
+    font-size: 100%;
+    text-decoration:none;
+}
+
+#gallery {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+/*#id id selector*/
+#sfu {
+    color: black;
+}
+
+#zju {
+    color: black;
+}
+
+footer {
+    height: 250px;
+    text-align: center;
+}
+
+iframe {
+    width: 77vw;
+    height: 80vh;
+}
