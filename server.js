@@ -4,14 +4,15 @@ const path = require("path");
 console.log(__dirname);
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 const publicDirPath = path.join(__dirname, "/public");
 app.use(express.static(publicDirPath));
 
 
 
-app.listen(2020, () => {
-    console.log("server up and running at 2020");
+app.listen(port, () => {
+    console.log("server up and running at " + port);
 });
 
 // var htmlreq = {'Content-Type': 'text/html'};
